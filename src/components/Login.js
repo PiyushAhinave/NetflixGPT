@@ -3,11 +3,10 @@ import { useState,useRef } from "react";
 import checkValidate from "../utils/validate";
 import { auth } from "../utils/firebase.js";
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice.js";
 const Login = () => {
-    const navigate = useNavigate();
     const[isSignIn,setSignIn]=useState(true);
     
     const[isValid,setIsValid]=useState(null);
@@ -38,7 +37,7 @@ const Login = () => {
                   }).then(() => {
                     const {uid,email,displayName,photoURL} = auth;
               dispatch(addUser({uid:uid,email:email,displayNAme:displayName,photoURL:photoURL,}));
-                    navigate("/browse");
+                    
                     
                   }).catch((error) => {
                     setIsValid(error.message);
@@ -56,7 +55,6 @@ const Login = () => {
             // Signed in 
             const user = userCredential.user;
             
-            navigate("/browse"); 
                 
             })
             .catch((error) => {
