@@ -8,4 +8,11 @@ const API_options = () =>{
       };
 } 
 
+export const SUPPORTED_LANGUAGES = [
+ { identifier:"en",name:"English"},
+{identifier:"hindi",name:"हिंदी"}
+]
+
+export const OPEN_AI_KEY = "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";
+
 export default API_options;

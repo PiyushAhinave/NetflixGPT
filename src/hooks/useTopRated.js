@@ -14,7 +14,7 @@ const useTopRated = () => {
     const json = await data.json();
 
     dispatch(addTopRated(json.results));
-    console.log(json.results);
+   
   };
 
   useEffect(() => {
