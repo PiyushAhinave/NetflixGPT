@@ -13,6 +13,5 @@ export const SUPPORTED_LANGUAGES = [
 {identifier:"hindi",name:"हिंदी"}
 ]
 
-export const OPEN_AI_KEY = "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";
 
 export default API_options;
