@@ -14,7 +14,7 @@ const GptSearchBar = () => {
   const langKey = useSelector((store)=>store.config.lang);
 
   const searchMovieTMDB = async(movie)=>{
-    const data = await fetch("https://api.themoviedb.org/3/search/movie?query="+movie+"&include_adult=false&language=en-US&page=1&api_key=becfe606a34093409f75d35eccf3990b",API_options)
+    const data = await fetch("https://api.themoviedb.org/3/search/movie?query="+movie+"&include_adult=false&language=en-US&page=1&api_key="+process.env.REACT_APP_TMDB_KEY,API_options)
   const json=await data.json();
 
   

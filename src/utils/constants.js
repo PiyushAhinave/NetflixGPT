@@ -13,5 +13,5 @@ export const SUPPORTED_LANGUAGES = [
 {identifier:"hindi",name:"हिंदी"}
 ]
 
-
+export const OPEN_AI_KEY = process.env.REACT_APP_OPEN_AI_KEY;
 export default API_options;

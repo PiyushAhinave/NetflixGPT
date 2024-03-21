@@ -11,7 +11,7 @@ const useMovieTrailer = (movieId) => {
   
   
   
-      const data = await fetch("https://api.themoviedb.org/3/movie/"+ movieId +"/videos?api_key=becfe606a34093409f75d35eccf3990b", API_options)
+      const data = await fetch("https://api.themoviedb.org/3/movie/"+ movieId +"/videos?api_key="+process.env.REACT_APP_TMDB_KEY, API_options)
   
       const json = await data.json();
 

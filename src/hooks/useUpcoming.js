@@ -8,7 +8,7 @@ const useUpcomingMovies = () => {
 
   const getUpcomingMovies = async () => {
     const data = await fetch(
-      "https://api.themoviedb.org/3/movie/upcoming?api_key=becfe606a34093409f75d35eccf3990b",
+      "https://api.themoviedb.org/3/movie/upcoming?api_key="+process.env.REACT_APP_TMDB_KEY,
       API_options
     );
     const json = await data.json();
