@@ -4,9 +4,9 @@ const VideoTitle = ({title,overview}) => {
 
   return (
     
-    <div className='w-full aspect-video pt-[13%] px-12 absolute bg-gradient-to-r from-gray-900  text-white'>
+    <div className='w-full aspect-video pt-[50%] md:pt-[13%] px-12 absolute bg-gradient-to-r from-gray-900  text-white'>
         <div className='ml-10'>
-        <h1 className='text-3xl font-bold mb-4 mt-4'>{title}</h1>
+        <h1 className='text-xl md:text-3xl font-bold my-4'>{title}</h1>
         <p className='w-1/4 py-4'>{overview} </p>
         </div >
         <div className='mb-4 mt-4 ml-10'>

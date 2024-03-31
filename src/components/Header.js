@@ -58,15 +58,15 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="absolute z-10 px-8 py-2 bg-gradient-to-b from-black w-full flex justify-between">
+    <div className="absolute z-10 px-8 py-1 md:py-2  bg-gradient-to-b from-black w-full flex  flex-col md:flex-row justify-between">
       <img
-        className="w-44"
+        className="w-44 mx-auto md:mx-0"
         src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
         alt="Netflix-logo"
       />
 
       {user && (
-        <div className="flex right-0">
+        <div className="flex ">
           {showGptSearch && <select
             
             onChange={handleLanguageChange}
@@ -81,18 +81,18 @@ const Header = () => {
 
           <button
             onClick={handleGptSearchClick}
-            className="bg-slate-400 font-bold hover:text-white hover:bg-black text-black rounded-lg px-3 mr-3 my-4"
+            className="bg-slate-400  text-black font-bold hover:text-white hover:bg-black rounded-lg px-1 md:px-3 mr-1 md:mr-3 my-5 md:my-4"
           >
             {showGptSearch ? "Homepage" : "Gpt Search"}
           </button>
           <img
-            className="w-10 h-10 my-4"
+            className=" md:display w-0 md:w-10 h-0 md:h-10 my-5 md:my-4"
             src="https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.webp"
             alt="user-logo"
           />
           <button
             onClick={handleSignOut}
-            className="bg-slate-400 font-bold hover:text-white hover:bg-black text-black rounded-lg px-3 mx-3 my-4"
+            className="bg-slate-400 font-bold hover:text-white hover:bg-black text-black rounded-lg  px-4 md:px-3 mx-1 md:mx-3 my-3 md:my-4"
           >
             {" "}
             Sign out{" "}
